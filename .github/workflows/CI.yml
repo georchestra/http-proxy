@@ -42,7 +42,7 @@ jobs:
         username: '${{ secrets.DOCKER_HUB_USERNAME }}'
         password: '${{ secrets.DOCKER_HUB_PASSWORD }}'
 
-    - name: Push frontend
+    - name: Push http-proxy latest
       if: github.repository == 'georchestra/http-proxy'
       run: docker push georchestra/http-proxy:latest
 
