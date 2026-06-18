@@ -164,6 +164,7 @@ final class Utils {
         }
         return set.stream().filter(Objects::nonNull)
                 .map(String::trim).map(String::toLowerCase)
+                .filter(s -> !s.isEmpty())
                 .collect(Collectors.toSet());
     }
 
